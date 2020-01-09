@@ -14,7 +14,7 @@
 ## 配置方式
 ### 自定义主题及配置
 
-自定义主题位置在source/css/_colors目录，配置方式：
+自定义主题位置在source/css/_colors目录，配置方式在主题_config.yml里面：
 ```yml
 colorscheme: light
 ```
