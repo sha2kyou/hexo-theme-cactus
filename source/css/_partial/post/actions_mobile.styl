@@ -98,30 +98,56 @@
     a:hover
       color: $color-link
 
-    .toc-level-1 > .toc-link
-      display: none
+    .toc-level-1
+      color: $color-text
+      font-size: .9rem
+
+      &:before
+        color: $color-accent-1
+        content: "#"
 
     .toc-level-2
       color: $color-text
       font-size: .8rem
 
       &:before
-        color: $color-accent-1
-        content: "#"
+        color: $color-accent-2
+        content: "##"
 
     .toc-level-3
-      color: $color-meta
+      color: $color-text
       font-size: .7rem
-      line-height: 15px
+
+      &:before
+        color: $color-accent-3
+        content: "###"
 
     .toc-level-4
       display: none
+      color: $color-text
+      font-size: .6rem
+
+      &:before
+        color: $color-accent-3
+        content: "####"
 
     .toc-level-5
       display: none
+      color: $color-text
+      font-size: .5rem
+
+      &:before
+        color: $color-accent-3
+        content: "#####"
 
     .toc-level-6
       display: none
+      color: $color-text
+      font-size: .4rem
+
+      &:before
+        color: $color-accent-3
+        content: "######"
 
     .toc-number
       display: none
