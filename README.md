@@ -1,12 +1,14 @@
-[Demo](https://pliuzhuoming.xyz)
+# Cactus：一个简洁的Hexo主题
 
-## 主要修改
+[Demo](https://liuzhuoming.xyz)
+
+## 相对原项目主要修改
 
 - 删除多语言
-- 调整部分mobile端菜单/按钮等显示
 - 删除分享按钮
 - 调整标题显示
-- 调整toc
+- 调整部分mobile端菜单/按钮等显示
+- 调整toc显示
 - 调整部分默认主题样式
 
 ## 配置方式
