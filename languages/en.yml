@@ -60,6 +60,7 @@ counter:
 
 comments:
   no_js: Please enable JavaScript to view the comments.
+  visitor: Visitor
 
 tooltip:
   copy_tip: Copy to clipboard!

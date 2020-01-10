@@ -1,7 +1,12 @@
-<% if(page.comments && theme.disqus.enabled){ %>
-    <div class="blog-post-comments">
-        <div id="disqus_thread">
-            <noscript><%= __('comments.no_js') %></noscript>
-        </div>
+<% if(page.comments && theme.valine.enable && theme.valine.appid && theme.valine.appkey){ %>
+    <button class="blog-post-comments-btn" onclick="show_posts_comments()">显示评论</button>
+    <div class="blog-post-comments" style="display: none">
+        <div id="valine_comments"></div>
     </div>
+    <script type="text/javascript">
+        function show_posts_comments() {
+            $(".blog-post-comments").show();
+            $(".blog-post-comments-btn").hide();
+        }
+    </script>
 <% } %>
