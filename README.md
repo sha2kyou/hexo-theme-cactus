@@ -1,6 +1,8 @@
 # Cactus：一个简洁的Hexo主题
 
-[Demo](https://liuzhuoming.xyz)
+[预览](https://liuzhuoming.xyz)
+
+[下载最新发布版](https://github.com/liuzhuoming23/hexo-theme-cactus/releases)
 
 ## 相对原项目主要修改
 
