@@ -34,11 +34,11 @@ colorscheme: light
     },
     {
        "name":"Font Awesome",
-       "url":"http://fontawesome.io/",
        "desc":"The iconic font and CSS toolkit"
     }
 ]
 ```
+有url参数则可跳转，没有则只是展示
 
 ## License
 
