@@ -81,6 +81,26 @@ body
     a:hover
       underline(6px, $color-link)
 
+  #hexo-blog-encrypt
+    .hbe-button
+      display: none
+
+    .hbe-input-container
+      label
+        color: $color-link
+        font-size: 16px
+        pointer-events: none
+
+      #hbePass
+        background-color: transparent
+        color: $color-text
+        font-size: 16px
+        border: 0
+
+      .bottom-line
+        height: 1px
+        background: $color-text
+
 @media (min-width: 540px)
   .image-wrap
     flex-direction: row
@@ -177,7 +197,8 @@ code
     a:hover
       color: lighten($color-meta-code, 20%)
 
-    &:before, content: ""
+    &:before
+      content: ""
       display: table
 
     &:after
@@ -193,6 +214,7 @@ code
     right: 20px
     opacity: 0
     transition: opacity 0.2s ease-in
+
     &:hover
       color: $color-accent-1
 

@@ -5,7 +5,7 @@
   <span id="menu">
     <span id="nav">
       <ul>
-        <% for (var i in theme.nav) { %> 
+        <% for (var i in theme.nav) { %>
           <li><a href="<%- url_for(theme.nav[i]) %>"><%= __('nav.'+i).replace("nav.", "") %></a></li>
         <% } %>
       </ul>
@@ -28,8 +28,16 @@
       <span id="i-share" class="info" style="display:none;"><%= __('post.desktop.share') %></span>
     </span>
     <br/>
-    <div id="toc">
-      <%- toc(page.content) %>
+    <div id="toc-div" class="toc-article" <% if (page.encrypt == true) { %>style="display:none" <% } %>>
+        <% if (page.encrypt == true) { %>
+          <div id="toc">
+            <%- toc(page.content) %>
+          </div>
+        <% } else { %>
+          <div id="toc">
+            <%- toc(page.content) %>
+          </div>
+        <% } %>
     </div>
   </span>
 </div>

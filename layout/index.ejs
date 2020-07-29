@@ -35,14 +35,11 @@
 <% if (site.data.projects) { %>
     <section id="projects">
         <span class="h1"><a href="<%- url_for(theme.projects_url) %>"><%= __('index.projects') %></a></span>
-        <ul class="project-list">
+        <ul class="post-list">
             <% for(var obj in site.data.projects){ %>
-                <li class="project-item">
-                    <% if (site.data.projects[obj].url) { %>
-                        <a href="<%= site.data.projects[obj].url %>"><%= site.data.projects[obj].name %></a>: <%- markdown(site.data.projects[obj].desc) %>
-                    <% } else { %>
-                        <%= site.data.projects[obj].name %>: <%- markdown(site.data.projects[obj].desc) %>
-                    <% } %>
+                <li class="post-item">
+                    <div class="meta"><%- site.data.projects[obj].date %></div>
+                    <span><b>@<%= site.data.projects[obj].name %></b>: <%= site.data.projects[obj].context %></span>
                 </li>
             <% } %>
         </ul>

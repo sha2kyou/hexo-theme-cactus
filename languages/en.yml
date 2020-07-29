@@ -4,9 +4,10 @@ nav:
   articles: Writing
   tag: Tag
   category: Category
-  projects: Projects
+  projects: Essay
   search: Search
   friends: Friends
+  essay: Essay
 
 footer:
   copyright: Copyright
