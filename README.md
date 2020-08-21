@@ -14,6 +14,8 @@
 - 调整部分默认主题样式
 - 添加Valine评论
 - 添加正文加密
+- 添加底部上一篇下一篇
+- 添加系列文章展示
 
 ## 配置方式
 ### 自定义主题及配置
@@ -39,6 +41,13 @@ colorscheme: light
        "context":"The iconic font and CSS toolkit"
     }
 ]
+```
+
+### 系列文章展示
+
+在文章配置里面添加相同的series参数：
+```yml
+series: 算法
 ```
 
 ## License

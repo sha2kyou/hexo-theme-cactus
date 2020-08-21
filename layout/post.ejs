@@ -13,6 +13,28 @@
     <%- partial('_partial/post/gallery') %>
     <div class="content" itemprop="articleBody">
         <%- page.content %>
+        <% if (page.series){ %>
+            <hr/>
+            <div class="post-series"><b><%= __('post.common.series') %></b> #<%= page.series %>
+                <% site.posts.sort('date').map(function(p){ %>
+                    <% if (page.series === p.series){ %>
+                        <li><a href="<%- url_for(p.path) %>"><%= p.title %></a></li>
+                    <% } %>
+                <% }) %>
+            </div>
+        <% } %>
+        <div class="pagination">
+            <% if (page.prev || page.next) { %>
+                <hr/>
+                <% if (page.prev) { %>
+                    <a href="<%- url_for(page.prev.path) %>"><i class="fas fa-chevron-left"></i><%= page.prev.title %></a>
+                <% } %>
+                <% if (page.next) { %>
+                    <a href="<%- url_for(page.next.path) %>"><%= page.next.title %><i class="fas fa-chevron-right"></i>
+                    </a>
+                <% } %>
+            <% } %>
+        </div>
     </div>
 </article>
 <%- partial('_partial/comments') %>

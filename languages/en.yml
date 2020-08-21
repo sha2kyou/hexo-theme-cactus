@@ -22,6 +22,8 @@ index:
   most_recent: Most recent
 
 post:
+  common:
+    series: Series
   desktop:
     previous: Previous post
     next: Next post
@@ -32,6 +34,7 @@ post:
     toc: TOC
     back_to_top: Top
     share: Share
+
 
 search:
   search: Search...

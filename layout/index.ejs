@@ -37,10 +37,12 @@
         <span class="h1"><a href="<%- url_for(theme.projects_url) %>"><%= __('index.projects') %></a></span>
         <ul class="post-list">
             <% for(var obj in site.data.projects){ %>
+                <% if(obj < theme.projects.post_count){%>
                 <li class="post-item">
                     <div class="meta"><%- site.data.projects[obj].date %></div>
                     <span><b>@<%= site.data.projects[obj].name %></b>: <%= site.data.projects[obj].context %></span>
                 </li>
+                <% } %>
             <% } %>
         </ul>
     </section>
