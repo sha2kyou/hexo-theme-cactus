@@ -101,12 +101,54 @@ body
         height: 1px
         background: $color-text
 
-
   hr
     height: 1px
     border: none
     border-top: 1px dashed
-    margin-bottom: 10px
+    margin-bottom: 1em
+    margin-top: 1em
+
+  #friend-avatar
+    border-radius: 50%
+    background-repeat: no-repeat
+    background-size: 100% 100%
+    height: 50px
+    width: 50px
+
+.donate
+  position: relative
+  display: flex
+  flex-direction: column
+  min-height: 100%
+  overflow-wrap: break-word
+
+  .donates-btn
+    margin: auto
+    background: $color-background;
+    border: 1px dashed $color-border;
+    border-radius: 4px;
+    color: $color-text
+    width: 150px
+
+  .donate-imgs
+    position: relative
+    display: none
+    width: 100%
+
+    .donate-img
+      margin: auto
+      width: 200px
+      height: 200px
+
+.pagination-index
+  display: inline-block
+
+  a
+    padding: 4px 6px
+    background-image: none
+    color: $color-text
+    text-decoration: none
+    font-size: 1em
 
 @media (min-width: 540px)
   .image-wrap

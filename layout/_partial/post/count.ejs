@@ -1,6 +1,8 @@
 <% if(page.comments && theme.valine.enable && theme.valine.appid && theme.valine.appkey && theme.valine.visitor ){ %>
-    <span id="<%= url_for(page.path) %>" class="leancloud_visitors" data-flag-title="Your Article Title">
-        <em class="post-meta-item-text"><%= __('comments.visitor') %></em>
-        <i class="leancloud-visitors-count">0</i>
-    </span>
+    <div class="article-count">
+        <span id="<%= url_for(page.path) %>" class="leancloud_visitors" data-flag-title="<%= page.title %>">
+            <span class="post-meta-item-text"><%= __('comments.visitor') %></span>
+            <span class="leancloud-visitors-count">0</span>
+        </span>
+    </div>
 <% } %>

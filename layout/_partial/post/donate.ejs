@@ -1,0 +1,21 @@
+<% if (theme.donate && theme.donate.enabled && (theme.donate.wechat || theme.donate.alipay)) { %>
+    <div class="donate">
+        <hr/>
+        <button class="donates-btn" onclick="show_donates()">打赏</button>
+        <div class="donate-imgs">
+            <% if (theme.donate.wechat && theme.donate.wechat.enabled) { %>
+                <img class="donate-img" src="<%= theme.donate.wechat.path %>" alt="微信打赏"/>
+            <% } %>
+            <% if (theme.donate.alipay && theme.donate.alipay.enabled) { %>
+                <img class="donate-img" src="<%= theme.donate.alipay.path %>" alt="支付宝打赏"/>
+            <% } %>
+        </div>
+        <script type="text/javascript">
+            function show_donates() {
+                $(".donate-imgs").show();
+                $(".donate-imgs").css("display", "flex");
+                $(".donates-btn").hide();
+            }
+        </script>
+    </div>
+<% } %>

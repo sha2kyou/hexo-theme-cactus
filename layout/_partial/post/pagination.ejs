@@ -1,0 +1,13 @@
+<div class="pagination-index">
+    <% if (page.prev || page.next) { %>
+        <hr/>
+        <% if (page.prev) { %>
+            <a style="float:left;" href="<%- url_for(page.prev.path) %>"><i class="fas fa-angle-left"></i><%= page.prev.title %>
+            </a>
+        <% } %>
+        <% if (page.next) { %>
+            <a style="float:right;" href="<%- url_for(page.next.path) %>"><%= page.next.title %><i class="fas fa-angle-right"></i>
+            </a>
+        <% } %>
+    <% } %>
+</div>

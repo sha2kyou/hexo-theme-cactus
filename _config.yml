@@ -153,3 +153,26 @@ baidu_analytics:
 # logo and/or favicons of you website.
 gravatar:
   email: name@email.com
+
+# 主页展示的项目数量
+projects:
+  post_count: 5
+
+# 知识共享协议
+cc:
+  enabled: true
+  post:
+    enabled: true
+  url: https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh
+  name: CC BY-NC-SA 4.0
+  description: 署名-非商业性使用-相同方式共享 4.0 国际
+
+#打赏
+donate:
+  enabled: true
+  wechat:
+    enabled: true
+    path: /images/wechat.jpg
+  alipay:
+    enabled: true
+    path: /images/alipay.jpg

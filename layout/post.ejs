@@ -5,36 +5,16 @@
             <%- partial('_partial/post/date', {post: page, class_name: 'postdate'}) %>
             <%- partial('_partial/post/category') %>
             <%- partial('_partial/post/tag') %>
-            <br/>
             <%- partial('_partial/post/count') %>
-
         </div>
     </header>
     <%- partial('_partial/post/gallery') %>
     <div class="content" itemprop="articleBody">
         <%- page.content %>
-        <% if (page.series){ %>
-            <hr/>
-            <div class="post-series"><b><%= __('post.common.series') %></b> #<%= page.series %>
-                <% site.posts.sort('date').map(function(p){ %>
-                    <% if (page.series === p.series){ %>
-                        <li><a href="<%- url_for(p.path) %>"><%= p.title %></a></li>
-                    <% } %>
-                <% }) %>
-            </div>
-        <% } %>
-        <div class="pagination">
-            <% if (page.prev || page.next) { %>
-                <hr/>
-                <% if (page.prev) { %>
-                    <a href="<%- url_for(page.prev.path) %>"><i class="fas fa-chevron-left"></i><%= page.prev.title %></a>
-                <% } %>
-                <% if (page.next) { %>
-                    <a href="<%- url_for(page.next.path) %>"><%= page.next.title %><i class="fas fa-chevron-right"></i>
-                    </a>
-                <% } %>
-            <% } %>
-        </div>
     </div>
+    <%- partial('_partial/post/donate') %>
+    <%- partial('_partial/post/cc') %>
 </article>
+<%- partial('_partial/post/series') %>
+<%- partial('_partial/post/pagination') %>
 <%- partial('_partial/comments') %>
