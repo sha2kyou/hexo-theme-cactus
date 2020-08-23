@@ -1,6 +1,5 @@
 <% if (theme.cc && theme.cc.enabled && theme.cc.post.enabled) { %>
-    <hr/>
-    <%- markdown(theme.cc.content
+    <%- markdown(">" + theme.cc.content
             .replace("{author}", config.author)
             .replace("{cc.description}", theme.cc.description)
             .replace("{cc.name}", theme.cc.name)
