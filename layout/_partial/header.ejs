@@ -17,7 +17,7 @@
         <a href="#"><i class="fas fa-bars fa-2x"></i></a>
       </li>
       <% for (var i in theme.nav) { %>
-        <li><a style="font-weight:bold" href="<%- url_for(theme.nav[i]) %>"><%= __('nav.'+i).replace("nav.", "") %></a></li>
+        <li><a href="<%- url_for(theme.nav[i]) %>"><%= __('nav.'+i).replace("nav.", "") %></a></li>
       <% } %>
     </ul>
   </div>

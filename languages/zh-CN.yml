@@ -19,6 +19,7 @@ index:
   projects: 一句
   topics: 标签
   most_recent: 最新的文章
+  description: 简介
 
 post:
   common:
@@ -48,3 +49,9 @@ comments:
 tooltip:
   copy_tip: 复制到粘贴板!
   copied: 复制成功!
+
+wordcount:
+  symbols: 字数
+  time: 阅读时间
+  total_symbols: 总字数
+  total_time: 总阅读时间

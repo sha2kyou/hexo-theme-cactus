@@ -19,6 +19,7 @@ index:
   projects: Projects
   topics: Topics
   most_recent: Most recent
+  description: Bolg Description
 
 post:
   common:
@@ -68,3 +69,9 @@ comments:
 tooltip:
   copy_tip: Copy to clipboard!
   copied: Copied!
+
+wordcount:
+  symbols: Symbols
+  time: Time
+  total_symbols: Total Symbols
+  total_time: Total Time

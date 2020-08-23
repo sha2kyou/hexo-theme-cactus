@@ -3,8 +3,12 @@
     <div class="post-series"><b><%= __('post.common.series') %></b> #<%= page.series %>
         <% var i = 0; %>
         <% site.posts.sort('date').map(function(p){ %>
-            <% if (page.series === p.series){ %>
-                <p><a href="<%- url_for(p.path) %>"><%= "(" + ++i + ")" + p.title %></a></p>
+            <% if (page.series == p.series){ %>
+                <p style="margin:0.425em 0 0.425em 0">
+                    <a href="<%- url_for(p.path) %>">
+                        <%= "(" + ++i + ")" + p.title %><% if (theme.post_emoji_mark == true && (p.encrypt == true || p.write_it_later == true)) { %>(<% if (p.encrypt == true) { %>🔒<% } %><% if (p.write_it_later == true) { %>🐦<% } %>)<% } %>
+                    </a>
+                </p>
             <% } %>
         <% }) %>
     </div>

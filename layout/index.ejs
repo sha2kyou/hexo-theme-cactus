@@ -1,5 +1,23 @@
+<section id="wordcount">
+    <% if (config.symbols_count_time) { %>
+          <div class="wordcount-total_symbols">
+            <% if (config.symbols_count_time.total_symbols) { %>
+              <span><%= __('wordcount.total_symbols') %></span>
+              <span><%= symbolsCountTotal(site) %></span>
+            <% } %>
+          </div>
+          <div class="wordcount-total_time">
+            <% if (config.symbols_count_time.total_time) { %>
+              <span><%= __('wordcount.total_time') %></span>
+              <span><%= symbolsTimeTotal(site) %></span>
+            <% } %>
+          </div>
+    <% } %>
+</section>
+
 <section id="about">
     <% if (config.description) { %>
+        <span class="h1"><%= __('index.description') %></span>
         <%- markdown(config.description) %>
     <% } %>
 </section>

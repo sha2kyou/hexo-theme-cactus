@@ -1,0 +1,14 @@
+<% if (config.symbols_count_time) { %>
+    <div class="wordcount-symbols">
+      <% if (config.symbols_count_time.symbols) { %>
+        <span><%= __('wordcount.symbols') %></span>
+        <span><%= symbolsCount(page) %></span>
+      <% } %>
+    </div>
+    <div class="wordcount-time">
+      <% if (config.symbols_count_time.time) { %>
+        <span><%= __('wordcount.time') %></span>
+        <span><%= symbolsTime(page) %></span>
+      <% } %>
+    </div>
+<% } %>
