@@ -43,10 +43,12 @@
                 <%- partial('_partial/post/date', {post: post, class_name: 'meta'}) %>
                 <span><%- partial('_partial/post/title', {post: post, index: true, class_name: ''}) %></span>
             </li>
-            <li class="post-item">
-                <div class="meta"></div>
-                <div class="post-item-content"><%- strip_html(truncate(post.excerpt, {length: 250})) %></div>
-            </li>
+            <% if (theme.show_post_excerpt) { %>
+                <li class="post-item">
+                    <div class="meta"></div>
+                    <div class="post-item-content"><%- strip_html(truncate(post.excerpt, {length: 250})) %></div>
+                </li>
+            <% } %>
         <% }); %>
     </ul>
     <% if (theme.posts_overview.show_all_posts) { %>

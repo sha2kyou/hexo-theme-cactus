@@ -71,6 +71,12 @@ password: mima
 later: true
 ```
 
+### 首页是否展示文章简述
+在文章配置里面添加：
+```yml
+show_post_excerpt: true
+```
+
 ## License
 
 MIT

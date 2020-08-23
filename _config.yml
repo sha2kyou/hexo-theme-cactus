@@ -5,7 +5,7 @@
 # Link to a page that gives an overview of all your projects.
 # This can be an external link (e.g., to you GitHub profile) or to another
 # page within your website.
-projects_url: http://github.com/liuzhuoming23
+projects_url:
 
 # Set the page direction to RTL or LTR. default is LTR. (if you set it 'rtl', the 'vazir' font will be loaded.)
 direction: ltr
@@ -17,16 +17,17 @@ nav:
   home: /
   articles: /archives/
   category: /categories/
-#  tag: /tags/
+  #  tag: /tags/
   about: /about/
   friends: /friends/
+  search: /search/
 
 # Links to your social media accounts.
 # The keys should correspond to Fontawesome icon names
 # (see https://fontawesome.com/icons?d=gallery&s=brands);
 # only 'mail' is an exception.
 social_links:
-  github: http://github.com/liuzhuoming23
+  github:
 
 # Customize the overview with displaying a tagcloud on the index page.
 # Options: https://hexo.io/docs/helpers.html#tagcloud
@@ -39,7 +40,7 @@ tags_overview: false
 #   - sort_updated: sort posts by last modification date instead of creation date.
 posts_overview:
   show_all_posts: false
-  post_count: 5
+  post_count: 8
   sort_updated: false
 
 # Customize the archive view.
@@ -71,7 +72,7 @@ logo:
   enabled: true
   width: 50
   height: 50
-  url: /images/logo.png
+  url: /images/avatar.png
   gravatar: false
 
 # Customize the favicons.
@@ -85,13 +86,13 @@ logo:
 #   - gravatar: whether to create a favicon from your Gravatar
 favicon:
   desktop:
-    url: /images/logo.png
+    url: /images/avatar.png
     gravatar: false
   android:
-    url: /images/favicon.ico
+    url: /images/avatar.png
     gravatar: false
   apple:
-    url: /images/favicon.ico
+    url: /images/avatar.png
     gravatar: false
 
 # The color scheme that should be used to highlight codeblocks.
@@ -101,7 +102,7 @@ favicon:
 # Set the color scheme.
 # Available color schemes are 'dark', 'light', 'classic' and 'black&white'.
 # Alternatively, add your own custom color scheme to source/css/_colors.
-colorscheme: classic
+colorscheme: light
 
 # Maximal width of the page in rem units.
 page_width: 48
@@ -120,24 +121,22 @@ open_graph:
   twitter_id:
   google_plus:
 
-
 ##############################################################################
 # Plugins
 ##############################################################################
 
 # Valine Comments
 valine:
-  enable: false
+  enable:
   appid:
   appkey:
-  notify: false # Mail notifier
-  verify: true # Verification code
-  placeholder: 想对作者说点什么？ # Comment box placeholder
-  avatar: retro # Gravatar style
-  pageSize: 10 # Pagination size
-  lang: zh-cn # Language, available values: en, zh-cn
-  visitor: false # Article reading statistic
-  recordIP: true # Whether to record the commenter IP
+  placeholder: 想对作者说点什么？
+  avatar: identicon
+  pageSize: 8
+  lang: zh-cn
+  visitor: true
+  recordIP: true
+  enableQQ: true
 
 # Fill in your Google Analytics tracking ID to enable Google Analytics.
 google_analytics:
@@ -152,11 +151,11 @@ baidu_analytics:
 # Fill in you Gravatar user id / email if you want to use your gravatar as the
 # logo and/or favicons of you website.
 gravatar:
-  email: name@email.com
+  email:
 
 # 主页展示的项目数量
 projects:
-  post_count: 5
+  post_count: 8
 
 # 知识共享协议
 cc:
@@ -176,3 +175,9 @@ donate:
   alipay:
     enabled: true
     path: /images/alipay.jpg
+
+#用emoji标记部分文章状态
+post_emoji_mark: true
+
+#首页是否展示文章简述
+show_post_excerpt: true
