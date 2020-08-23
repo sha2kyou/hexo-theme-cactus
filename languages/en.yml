@@ -19,7 +19,7 @@ index:
   projects: Projects
   topics: Topics
   most_recent: Most recent
-  description: Bolg Description
+  description: Bolg description
 
 post:
   common:
@@ -39,6 +39,7 @@ post:
 search:
   search: Search...
   no_results: No results found.
+  wait_a_minute: Wait a minute.
 
 tag_cloud:
   zero: No tags

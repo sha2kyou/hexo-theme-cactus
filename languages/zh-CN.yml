@@ -38,6 +38,7 @@ post:
 search:
   search: 搜索...
   no_results: 抱歉，没有符合您搜索条件的结果。请换其它关键词再试。
+  wait_a_minute: 首次加载需要较长时间，请等待几秒后再尝试。
 
 pagination:
   page: 第 %d 页，共 %d 页
