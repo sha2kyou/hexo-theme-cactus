@@ -1,6 +1,6 @@
 # Cactus：一个简洁的Hexo主题
 
-[预览](https://bolg.futurenotfound.top)
+[预览](https://blog.futurenotfound.top)
 
 [下载最新发布版](https://github.com/liuzhuoming23/hexo-theme-cactus/releases)
 
