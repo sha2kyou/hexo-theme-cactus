@@ -162,6 +162,9 @@ cc:
   enabled: true
   post:
     enabled: true
+  content: |
+    本文是{author}的原创文章，转载请提前告知作者并且标明出处。
+    内容遵循 {cc.description} [{cc.name}]({cc.url}) 协议。
   url: https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh
   name: CC BY-NC-SA 4.0
   description: 署名-非商业性使用-相同方式共享 4.0 国际
