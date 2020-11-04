@@ -179,8 +179,19 @@ donate:
     enabled: true
     path: /images/alipay.jpg
 
-#用emoji标记部分文章状态
+# 用emoji标记部分文章状态
 post_emoji_mark: true
 
-#首页是否展示文章简述
+# 首页是否展示文章简述
 show_post_excerpt: true
+
+# Customize the copyright years
+# Note: if start_year/end_year not provided, will use current year.
+copyright:
+  start_year: 2018
+  end_year:
+
+# Adobe TypeKit
+type_kit:
+  enabled: false
+  project_id: 

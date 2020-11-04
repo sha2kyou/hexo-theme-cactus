@@ -48,11 +48,13 @@ var searchFunc = function(path, searchId, contentId) {
     }
     return result;
   }
-
+  
   $.ajax({
     url: path,
     dataType: "xml",
     success: function(xmlResponse) {
+      $("input#search-input").removeAttr("readonly");
+      $(".search-wait-a-minute").hide();
       // get the contents from search data
       var datas = $("entry", xmlResponse).map(function() {
         return {
@@ -107,7 +109,7 @@ var searchFunc = function(path, searchId, contentId) {
           if (matches > 0) {
             var searchResult = {};
             searchResult.rank = matches;
-            searchResult.str = "<li><a href='"+ dataUrl +"' class='search-result-title'>"+ dataTitle +"</a>";
+            searchResult.str = "<li><a href='../"+ dataUrl +"' class='search-result-title'>"+ dataTitle +"</a>";
             if (firstOccur >= 0) {
               // cut out 100 characters
               var start = firstOccur - 20;
@@ -139,15 +141,17 @@ var searchFunc = function(path, searchId, contentId) {
             resultList.push(searchResult);
           }
         });
-        resultList.sort(function(a, b) {
-            return b.rank - a.rank;
-        });
-        var result ="<ul class=\"search-result-list\">";
-        for (var i = 0; i < resultList.length; i++) {
-          result += resultList[i].str;
+        if (resultList.length) {
+          resultList.sort(function(a, b) {
+              return b.rank - a.rank;
+          });
+          var result ="<ul class=\"search-result-list\">";
+          for (var i = 0; i < resultList.length; i++) {
+            result += resultList[i].str;
+          }
+          result += "</ul>";
+          $resultContent.innerHTML = result;
         }
-        result += "</ul>";
-        $resultContent.innerHTML = result;
       });
     }
   });

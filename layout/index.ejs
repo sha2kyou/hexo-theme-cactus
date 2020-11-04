@@ -57,21 +57,19 @@
 </section>
 
 <% if (site.data.projects) { %>
-    <section id="projects">
-        <span class="h1"><a href="<%- url_for(theme.projects_url) %>"><%= __('index.projects') %></a></span>
-        <ul class="post-list">
-            <% for(var obj in site.data.projects){ %>
-                <% if(obj < theme.projects.post_count){ %>
-                    <li class="post-item">
-                        <div class="meta"><%- site.data.projects[obj].date %></div>
-                        <div><b>@<%= site.data.projects[obj].name %></b></div>
-                    </li>
-                    <li class="post-item">
-                        <div class="meta"></div>
-                        <div class="post-item-content"><%= site.data.projects[obj].context %></div>
-                    </li>
+    <% if(theme.projects.post == true){ %>
+        <section id="projects">
+            <span class="h1"><a href="<%- url_for(theme.projects_url) %>"><%= __('index.projects') %></a></span>
+            <ul class="post-list">
+                <% for(var obj in site.data.projects){ %>
+                    <% if(obj < theme.projects.post_count){ %>
+                        <li class="post-item">
+                            <div class="meta"><%= site.data.projects[obj].date %></div>
+                            <div><%= site.data.projects[obj].context %></div>
+                        </li>
+                    <% } %>
                 <% } %>
-            <% } %>
-        </ul>
-    </section>
+            </ul>
+        </section>
+    <% } %>
 <% } %>
