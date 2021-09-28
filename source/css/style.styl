@@ -10,6 +10,9 @@ global-reset()
 *, *:before, *:after
   box-sizing: border-box
 
+@media (prefers-color-scheme: dark) 
+  /** 暗黑模式配置 */
+
 html
   margin: 0
   padding: 0
@@ -222,7 +225,7 @@ pre
 
 code
   padding: 0 5px
-  border: 1px solid $color-border
+  border: 1px dotted $color-border
   border-radius: 2px
   font-size: 13px
   font-family: $font-family-mono
@@ -294,3 +297,7 @@ code
 
 #header-post
   display: none
+
+#tag-cloud
+  width: 70%
+  margin: 0 auto

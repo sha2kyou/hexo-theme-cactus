@@ -5,8 +5,7 @@
               <span><%= __('wordcount.total_symbols') %></span>
               <span><%= symbolsCountTotal(site) %></span>
             <% } %>
-          </div>
-          <div class="wordcount-total_time">
+            |
             <% if (config.symbols_count_time.total_time) { %>
               <span><%= __('wordcount.total_time') %></span>
               <span><%= symbolsTimeTotal(site) %></span>
@@ -17,7 +16,7 @@
 
 <section id="about">
     <% if (config.description) { %>
-        <span class="h1"><%= __('index.description') %></span>
+        <!-- <span class="h1"><%= __('index.description') %></span> -->
         <%- markdown(config.description) %>
     <% } %>
 </section>
@@ -59,13 +58,13 @@
 <% if (site.data.projects) { %>
     <% if(theme.projects.post == true){ %>
         <section id="projects">
-            <span class="h1"><a href="<%- url_for(theme.projects_url) %>"><%= __('index.projects') %></a></span>
+            <span class="h1"><%= __('index.projects') %></span>
             <ul class="post-list">
                 <% for(var obj in site.data.projects){ %>
                     <% if(obj < theme.projects.post_count){ %>
                         <li class="post-item">
                             <div class="meta"><%= site.data.projects[obj].date %></div>
-                            <div><%= site.data.projects[obj].context %></div>
+                            <span><%= site.data.projects[obj].name %></span>
                         </li>
                     <% } %>
                 <% } %>

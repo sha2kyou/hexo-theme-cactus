@@ -1,0 +1,6 @@
+<% if (theme.post_outdated.enable && page.date.isBefore(moment().subtract(theme.post_outdated.days,'d'))){ %>
+    <div class="post-outdate">
+        <b><i>这是一篇 <%= moment().diff(page.date, 'd') %> 天前创建的文章，所写内容可能已经过期，请慎重查看。</i></b>
+    </div>
+    <hr/>
+<% } %>

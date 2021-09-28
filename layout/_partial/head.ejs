@@ -62,4 +62,8 @@
           })(document);
       </script>
     <% } %>
+    <!-- Google Adsense -->
+    <% if (theme.google_adsense.enabled && theme.google_adsense.ad_client){ %>
+            <script data-ad-client="<%= theme.google_adsense.ad_client %>" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+    <% } %>
 </head>

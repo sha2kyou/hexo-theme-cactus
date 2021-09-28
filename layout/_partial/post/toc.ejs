@@ -1,0 +1,9 @@
+<% if (theme.toc){ %>
+    <div id="toc" class="toc-article">
+        <strong class="toc-title"><%= __('post.desktop.catalogue') %></strong>
+        <div class="toc-content">
+            <%- toc(page.content) %>
+        </div>
+    </div>
+    <hr/>
+<% } %>

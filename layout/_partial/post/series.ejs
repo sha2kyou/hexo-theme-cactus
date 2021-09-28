@@ -6,7 +6,13 @@
             <% if (page.series == p.series){ %>
                 <p style="margin:0.425em 0 0.425em 0">
                     <a href="<%- url_for(p.path) %>">
-                        <%= "(" + ++i + ")" + p.title %><% if (theme.post_emoji_mark == true && (p.encrypt == true || p.write_it_later == true)) { %>(<% if (p.encrypt == true) { %>🔒<% } %><% if (p.write_it_later == true) { %>🐦<% } %>)<% } %>
+                        <%= "(" + ++i + ")" + p.title %><% if (theme.post_emoji_mark == true && (p.encrypt == true || p.write_it_later == true || p.date.isBefore(moment().subtract(theme.post_outdated.days,'d')))) { %>
+                            (
+                                <% if (p.continuous_update == true) { %>📹<% } %>
+                                <% if (p.write_it_later == true) { %>🐦<% } %>
+                                <% if (p.date.isBefore(moment().subtract(theme.post_outdated.days,'d'))) { %>🕙<% } %>
+                            )
+                            <% } %>
                     </a>
                 </p>
             <% } %>

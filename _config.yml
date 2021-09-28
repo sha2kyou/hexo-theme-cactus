@@ -17,9 +17,9 @@ nav:
   home: /
   articles: /archives/
   category: /categories/
-  #  tag: /tags/
-  about: /about/
+  tag: /tags/
   friends: /friends/
+  about: /about/
   search: /search/
 
 # Links to your social media accounts.
@@ -40,7 +40,7 @@ tags_overview: false
 #   - sort_updated: sort posts by last modification date instead of creation date.
 posts_overview:
   show_all_posts: false
-  post_count: 8
+  post_count: 5
   sort_updated: false
 
 # Customize the archive view.
@@ -69,10 +69,10 @@ post:
 #   - url: where the logo can be found
 #   - gravatar: whether to use your Gravatar as the logo
 logo:
-  enabled: true
+  enabled: false
   width: 50
   height: 50
-  url: /images/avatar.png
+  url: 
   gravatar: false
 
 # Customize the favicons.
@@ -86,13 +86,13 @@ logo:
 #   - gravatar: whether to create a favicon from your Gravatar
 favicon:
   desktop:
-    url: /images/avatar.png
+    url: /images/favicon.ico
     gravatar: false
   android:
-    url: /images/avatar.png
+    url: /images/favicon.ico
     gravatar: false
   apple:
-    url: /images/avatar.png
+    url: /images/favicon.ico
     gravatar: false
 
 # The color scheme that should be used to highlight codeblocks.
@@ -100,7 +100,7 @@ favicon:
 # highlight: rainbow
 
 # Set the color scheme.
-# Available color schemes are 'dark', 'light', 'classic' and 'black&white'.
+# Available color schemes are 'dark', 'light'.
 # Alternatively, add your own custom color scheme to source/css/_colors.
 colorscheme: light
 
@@ -112,7 +112,7 @@ page_width: 48
 ##############################################################################
 
 # Enable or disable the RSS feed.
-rss: false
+rss: true
 
 # Turn your web pages into graph objects (see http://ogp.me).
 open_graph:
@@ -127,7 +127,7 @@ open_graph:
 
 # Valine Comments
 valine:
-  enable:
+  enable: false
   appid:
   appkey:
   placeholder: 想对作者说点什么？
@@ -155,7 +155,8 @@ gravatar:
 
 # 主页展示的项目数量
 projects:
-  post_count: 8
+  post: true
+  post_count: 5
 
 # 知识共享协议
 cc:
@@ -169,29 +170,51 @@ cc:
   name: CC BY-NC-SA 4.0
   description: 署名-非商业性使用-相同方式共享 4.0 国际
 
-#打赏
+# 打赏
 donate:
-  enabled: true
+  enabled: false
   wechat:
     enabled: true
-    path: /images/wechat.jpg
+    path:
   alipay:
     enabled: true
-    path: /images/alipay.jpg
+    path:
 
 # 用emoji标记部分文章状态
 post_emoji_mark: true
 
 # 首页是否展示文章简述
-show_post_excerpt: true
+show_post_excerpt: false
 
 # Customize the copyright years
 # Note: if start_year/end_year not provided, will use current year.
 copyright:
-  start_year: 2018
+  start_year:
   end_year:
 
 # Adobe TypeKit
 type_kit:
   enabled: false
-  project_id: 
+  project_id:
+
+# ICP备案号
+icp:
+  enabled: false
+  icp_no:
+beian:
+  enabled: false
+  beian_no:
+  beian_id:
+
+# Google Adsense
+google_adsense:
+  enabled: false
+  ad_client:
+
+# 是否开启TOC
+toc: true
+
+# 是否开启过期文章提醒
+post_outdated:
+  enable: true
+  days: 365

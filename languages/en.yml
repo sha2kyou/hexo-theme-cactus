@@ -25,6 +25,7 @@ post:
   common:
     series: Series
   desktop:
+    catalogue: Catalogue
     previous: Previous post
     next: Next post
     back_to_top: Back to top
