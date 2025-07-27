@@ -1,6 +1,6 @@
 {
   "name": "hexo-theme-cactus",
-  "version": "3.0.0",
+  "version": "0.177.0",
   "description": "A responsive, clean and simple theme for Hexo.",
   "main": "index.js",
   "scripts": {
