@@ -16,14 +16,14 @@ index:
   enum_comma: ' '
   enum_and: ' '
   articles: 文章
-  projects: 打赏
+  projects: 项目
   topics: 标签
   most_recent: 最新的文章
   description: 简介
 
 post:
   common:
-    series: 系列文章
+    series: 合集
   desktop:
     catalogue: 目录
     previous: 上一篇
@@ -35,6 +35,11 @@ post:
     toc: 目录
     back_to_top: 返回顶部
     share: 分享
+  status:
+    draft: 草稿
+    revising: 修订中
+    archived: 已归档
+    featured: 精选
 
 search:
   search: 搜索...

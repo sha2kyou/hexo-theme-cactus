@@ -1,21 +1,30 @@
 <% if (page.series){ %>
+    <% 
+        var seriesPostCount = 0;
+        site.posts.forEach(function(p){
+            if (p.series == page.series){
+                seriesPostCount++;
+            }
+        });
+    %>
+    <% if (seriesPostCount > 1) { %>
     <hr/>
-    <div class="post-series"><b><%= __('post.common.series') %></b> #<%= page.series %>
-        <% var i = 0; %>
+    <div class="post-series"><div class="series-header"><b><%= __('post.common.series') %></b> #<%= page.series %></div>
         <% site.posts.sort('date').map(function(p){ %>
             <% if (page.series == p.series){ %>
                 <p style="margin:0.425em 0 0.425em 0">
                     <a href="<%- url_for(p.path) %>">
-                        <%= "(" + ++i + ")" + p.title %><% if (theme.post_emoji_mark == true && (p.encrypt == true || p.write_it_later == true || p.date.isBefore(moment().subtract(theme.post_outdated.days,'d')))) { %>
-                            (
-                                <% if (p.continuous_update == true) { %>📹<% } %>
-                                <% if (p.write_it_later == true) { %>🐦<% } %>
-                                <% if (p.date.isBefore(moment().subtract(theme.post_outdated.days,'d'))) { %>🕙<% } %>
-                            )
+                        <%= "(" + moment(p.date).format('YYYY-MM-DD') + ") " + p.title %><% if (theme.post_tag_mark == true && (p.encrypt == true || p.write_it_later == true || p.date.isBefore(moment().subtract(theme.post_outdated.days,'d')))) { %>
+                            <span class="post-status-tag">
+                                <% if (p.continuous_update == true) { %><span class="status-continuous-update"><%= __('post.status.continuous_update') %></span><% } %>
+                                <% if (p.write_it_later == true) { %><span class="status-write-it-later"><%= __('post.status.write_it_later') %></span><% } %>
+                                <% if (p.date.isBefore(moment().subtract(theme.post_outdated.days,'d'))) { %><span class="status-outdated"><%= __('post.status.outdated') %></span><% } %>
+                            </span>
                             <% } %>
                     </a>
                 </p>
             <% } %>
         <% }) %>
     </div>
+    <% } %>
 <% } %>

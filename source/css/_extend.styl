@@ -1,3 +1,8 @@
+.featured-icon {
+  color: $color-accent-1;
+  margin-right: 5px;
+}
+
 $base-style
   h1, .h1
     display: block
@@ -114,3 +119,45 @@ $base-style
   td
     padding: 0 8px
     border-bottom: none
+
+.hcb-block
+  margin: 1.5em 0 // Add vertical margin for separation
+  padding: 1em // Add padding inside the block
+  border-radius: 4px // Slightly rounded corners
+  border: 1px solid $color-accent-1 // Solid border with accent color
+
+  .hcb-block-title
+    font-weight: bold
+    margin-bottom: 0.5em
+    display: flex
+    align-items: center
+
+    .fa // Font Awesome icon
+      margin-right: 0.5em
+      color: $color-accent-1 // Icon color to accent color
+      font-family: "Font Awesome 5 Free"
+      font-weight: 900
+
+  // Type-specific styles
+  &.hcbinfo
+    // No specific background-color
+
+  &.hcbtip
+    // No specific background-color
+
+  &.hcbexample
+    // No specific background-color
+
+.post-mark
+  display: inline-block
+  padding: 2px 4px
+  font-size: 0.9em
+  margin-left: 0 // 边距设为0
+  background-color: $color-text // 背景色设为全局文字颜色
+  color: $color-background // 文字颜色设为全局背景色
+  vertical-align: middle // 垂直居中对齐
+  border-radius: 4px // 增加圆角
+  line-height: 1 // 消除额外行高
+
+
+

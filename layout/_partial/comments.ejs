@@ -1,4 +1,9 @@
 <% if(page.comments && theme.valine.enable && theme.valine.appid && theme.valine.appkey){ %>
+    <% if(theme.valine.default_show_comments){ %>
+    <div class="blog-post-comments">
+        <div id="valine_comments"></div>
+    </div>
+    <% } else { %>
     <hr/>
     <button class="blog-post-comments-btn" onclick="show_posts_comments()">显示评论</button>
     <div class="blog-post-comments" style="display: none">
@@ -11,4 +16,5 @@
         }
     </script>
     <hr/>
+    <% } %>
 <% } %>

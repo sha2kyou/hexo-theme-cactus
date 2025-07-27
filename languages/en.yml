@@ -35,7 +35,11 @@ post:
     toc: TOC
     back_to_top: Top
     share: Share
-
+  status:
+    draft: Draft
+    revising: Revising
+    archived: Archived
+    featured: Featured
 
 search:
   search: Search...

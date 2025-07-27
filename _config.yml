@@ -137,6 +137,8 @@ valine:
   visitor: true
   recordIP: true
   enableQQ: true
+  # 是否默认显示评论（而不需要点击按钮查看
+  default_show_comments: false
 
 # Fill in your Google Analytics tracking ID to enable Google Analytics.
 google_analytics:
@@ -180,10 +182,10 @@ donate:
     enabled: true
     path:
 
-# 用emoji标记部分文章状态
-post_emoji_mark: true
+# 是否使用自定义标签标记文章状态（status: featured 代表精选）
+post_tag_mark: true
 
-# 首页是否展示文章简述
+# 首页是否展示文章简述（<!-- more -->标记）
 show_post_excerpt: false
 
 # Customize the copyright years

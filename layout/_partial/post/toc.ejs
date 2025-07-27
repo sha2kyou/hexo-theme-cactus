@@ -1,9 +1,12 @@
 <% if (theme.toc){ %>
-    <div id="toc" class="toc-article">
-        <strong class="toc-title"><%= __('post.desktop.catalogue') %></strong>
-        <div class="toc-content">
-            <%- toc(page.content) %>
+    <% var toc_content = toc(page.content); %>
+    <% if (toc_content.length > 0) { %>
+        <div id="toc" class="toc-article">
+            <strong class="toc-title"><%= __('post.desktop.catalogue') %></strong>
+            <div class="toc-content">
+                <%- toc_content %>
+            </div>
         </div>
-    </div>
-    <hr/>
+        <hr/>
+    <% } %>
 <% } %>

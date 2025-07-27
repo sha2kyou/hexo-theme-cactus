@@ -64,7 +64,7 @@
                     <% if(obj < theme.projects.post_count){ %>
                         <li class="post-item">
                             <div class="meta"><%= site.data.projects[obj].date %></div>
-                            <span><%= site.data.projects[obj].name %></span>
+                            <a href="<%= site.data.projects[obj].url %>"><%= site.data.projects[obj].name %></a>
                         </li>
                     <% } %>
                 <% } %>

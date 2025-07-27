@@ -1,25 +1,32 @@
 <% if (index) { %>
     <% if (post.link) { %>
+        <% if (theme.post_tag_mark == true && post.status) { %>
+                
+                    <!-- <% if (post.status === 'draft') { %><span class="post-mark draft-mark"><%= __('post.status.draft') %></span><% } %>
+                    <% if (post.status === 'revising') { %><span class="post-mark revising-mark"><%= __('post.status.revising') %></span><% } %>
+                    <% if (post.status === 'archived') { %><span class="post-mark archived-mark"><%= __('post.status.archived') %></span><% } %>
+                    <% if (post.status === 'featured') { %><span class="post-mark featured-mark"><%= __('post.status.featured') %></span><% } %> -->
+                    <% if (post.status === 'featured') { %>
+                            <i class="fa fa-star featured-icon" aria-hidden="true"></i>
+                        <% } %>
+                    <% } %>
         <a class="<%= class_name %>" href="<%- url_for(post.link) %>" target="_blank" itemprop="url">
-            <%= post.title %><% if (theme.post_emoji_mark == true && (post.continuous_update == true || post.write_it_later == true || post.series || post.date.isBefore(moment().subtract(theme.post_outdated.days,'d')))) { %>
-                (
-                    <% if (post.series) { %>🧾<% } %>
-                    <% if (post.continuous_update == true) { %>📹<% } %>
-                    <% if (post.write_it_later == true) { %>🐦<% } %>
-                    <% if (post.date.isBefore(moment().subtract(theme.post_outdated.days,'d'))) { %>🕙<% } %>
-                )
-                <% } %>
+            <%= post.title %><% if (post.quality_score) { %> (<%= post.quality_score %>/10)<% } %>
         </a>
     <% } else if (post.title) { %>
+        <% if (theme.post_tag_mark == true && post.status) { %>
+                
+                    <!-- <% if (post.status === 'draft') { %><span class="post-mark draft-mark"><%= __('post.status.draft') %></span><% } %>
+                    <% if (post.status === 'revising') { %><span class="post-mark revising-mark"><%= __('post.status.revising') %></span><% } %>
+                    <% if (post.status === 'archived') { %><span class="post-mark archived-mark"><%= __('post.status.archived') %></span><% } %>
+                    <% if (post.status === 'featured') { %><span class="post-mark featured-mark"><%= __('post.status.featured') %></span><% } %> -->
+                    <% if (post.status === 'featured') { %>
+                            <i class="fa fa-star featured-icon" aria-hidden="true"></i>
+                        <% } %>
+                    <% } %>
         <a class="<%= class_name %>" href="<%- url_for(post.path) %>">
-            <%= post.title %><% if (theme.post_emoji_mark == true && (post.continuous_update == true || post.write_it_later == true || post.series || post.date.isBefore(moment().subtract(theme.post_outdated.days,'d')))) { %>
-                (
-                    <% if (post.series) { %>🧾<% } %>
-                    <% if (post.continuous_update == true) { %>📹<% } %>
-                    <% if (post.write_it_later == true) { %>🐦<% } %>
-                    <% if (post.date.isBefore(moment().subtract(theme.post_outdated.days,'d'))) { %>🕙<% } %>
-                )
-                <% } %>
+            <%= post.title %><% if (post.quality_score) { %> (<%= post.quality_score %>/10)<% } %>
+        </a>
         </a>
     <% } else { %>
         <a class="<%= class_name %>" href="<%- url_for(post.path) %>">Untitled</a>
